@@ -1,0 +1,192 @@
+STEEL HEAT TREATMENT / SURFACE PROCESS DECISION ENGINE
+MODEL EXPLANATION AND ENGINEERING RATIONALE
+----------------------------------------------------
+
+1. PURPOSE OF THE MODEL
+
+The Steel Heat Treatment / Surface Process Decision Engine is designed to assist
+engineers in selecting appropriate heat treatment or surface modification
+processes for steel components based on material properties, process constraints,
+and performance priorities.
+
+The tool is intended as an engineering decision-support system, not a replacement
+for metallurgical expertise, standards, or experimental validation.
+
+Its primary goals are:
+- To reduce ambiguity during early-stage process selection
+- To make trade-offs explicit and explainable
+- To formalize engineering intuition into a structured evaluation framework
+
+
+2. PROBLEM CONTEXT
+
+In practical engineering environments, the selection of a heat treatment or
+surface process is often driven by:
+- Prior experience
+- Rule-of-thumb knowledge
+- Incomplete comparison across alternatives
+
+This can lead to:
+- Over-conservative process choices
+- Ignoring viable surface engineering alternatives
+- Difficulty explaining why one process was chosen over another
+
+The decision engine addresses this by combining:
+- Material compatibility rules
+- Process constraints
+- Multi-criteria performance evaluation
+- Transparent explanation of outcomes
+
+
+3. OVERALL SYSTEM ARCHITECTURE
+
+The decision engine follows a modular architecture consisting of:
+
+- Data Layer:
+  Material and process characteristics are stored in structured CSV datasets.
+
+- Constraint Evaluation Layer:
+  Determines which processes are physically and metallurgically feasible.
+
+- Scoring Layer:
+  Quantifies how well each feasible process satisfies user-defined priorities.
+
+- Explanation Layer:
+  Generates human-readable reasoning for rankings and trade-offs.
+
+- Visualization Layer:
+  Produces comparative charts to aid interpretation of results.
+
+Each layer operates independently to maintain clarity and extensibility.
+
+
+4. MATERIAL AND PROCESS REPRESENTATION
+
+Materials are represented using:
+- Material family (e.g., carbon steel, alloy steel, stainless steel)
+- Carbon content
+- Compatibility flags relevant to phase transformations
+
+Processes are represented using:
+- Process family (bulk heat treatment, surface treatment, coating, etc.)
+- Required metallurgical mechanisms (martensitic transformation, diffusion,
+  precipitation, etc.)
+- Typical temperature ranges
+- Expected benefits and trade-offs across performance properties
+
+This representation allows new materials and processes to be added without
+modifying the core engine logic.
+
+
+5. CONSTRAINT-BASED FILTERING
+
+Before any scoring is performed, the engine applies a series of constraints to
+eliminate infeasible processes.
+
+Typical constraints include:
+- Incompatible phase transformation requirements
+- Insufficient carbon content
+- Excessive process temperature relative to user limits
+- Distortion risk exceeding tolerance
+- Known incompatibilities with specific material families
+
+This stage ensures that physically impossible or unsafe processes are never
+considered, regardless of scoring weights.
+
+
+6. MULTI-CRITERIA SCORING LOGIC
+
+After constraint filtering, remaining processes are evaluated using a weighted
+multi-criteria scoring approach.
+
+User-defined priorities are assigned to performance attributes such as:
+- Wear resistance
+- Fatigue life
+- Strength
+- Toughness
+- Corrosion resistance
+- Dimensional stability
+
+Each process has predefined response coefficients indicating how it influences
+each property. The overall score is computed as a weighted sum of contributions
+and penalties.
+
+This allows:
+- Explicit trade-off evaluation
+- Sensitivity to user intent
+- Consistent ranking across alternatives
+
+
+7. EXPLANATION AND TRANSPARENCY
+
+A key design goal of the engine is explainability.
+
+For each ranked process, the engine generates:
+- Positive contributors explaining why the process scored well
+- Identified trade-offs and penalties
+- Reasons for rejection when a process is filtered out
+
+This avoids the “black box” problem commonly seen in automated decision tools and
+helps users build trust in the recommendations.
+
+
+8. VISUAL COMPARISON AND INTERPRETATION
+
+Graphical outputs are generated to support interpretation:
+- Bar charts show individual property contributions
+- Radar charts illustrate overall performance profiles
+
+These visualizations help users quickly compare strengths and weaknesses across
+processes without relying solely on numeric scores.
+
+
+9. MATERIAL COMPARISON MODE
+
+In addition to single-material evaluation, the engine supports comparison of
+process outcomes across different materials.
+
+This enables:
+- Studying how material choice affects viable processing routes
+- Comparing best-performing processes between materials
+- Manual comparison of specific process-material combinations
+
+All comparisons reuse previously computed results to ensure consistency and
+avoid recomputation.
+
+
+10. USER EXTENSIBILITY AND DATA CONTROL
+
+The engine is intentionally data-driven.
+
+Users may:
+- Add custom materials
+- Add custom processes
+- Modify response coefficients
+
+by editing user-specific CSV files without altering the core codebase.
+
+This design supports educational use, research experimentation, and adaptation to
+organization-specific process knowledge.
+
+
+11. LIMITATIONS AND RESPONSIBLE USE
+
+The decision engine is subject to the following limitations:
+- Results depend on the quality and completeness of input data
+- Simplified scoring models cannot capture all metallurgical interactions
+- The tool does not replace standards, simulations, or physical testing
+
+Users are expected to validate recommendations through appropriate engineering
+methods before implementation.
+
+
+12. ENGINEERING SIGNIFICANCE
+
+This project demonstrates the application of:
+- Systems thinking in materials engineering
+- Formalization of domain knowledge into algorithms
+- Explainable decision-support design
+- Practical deployment of engineering software tools
+
+It bridges theoretical metallurgical concepts with practical decision-making
+needs commonly encountered in industrial environments.

@@ -1,0 +1,21 @@
+material_name,material_family,typical_standard,crystal_structure_rt,carbon_level,martensite_possible,precipitation_hardening_possible,diffusion_treatment_effective,nitride_formers_present,work_hardening_capable,corrosion_resistance_level,corrosion_sensitive_to_cold_work,max_recommended_heat_treatment_temp_c,quench_hardening_applicable,typical_industrial_use_case,notes_for_engine_logic
+AISI 1018,carbon_steel,AISI,ferritic,low,FALSE,FALSE,TRUE,FALSE,TRUE,low,FALSE,900,FALSE,structural,carburizing preferred
+AISI 1045,carbon_steel,AISI,mixed,medium,TRUE,FALSE,TRUE,FALSE,TRUE,low,FALSE,850,TRUE,gears_shafts,limited hardenability
+AISI 1080,carbon_steel,AISI,mixed,high,TRUE,FALSE,TRUE,FALSE,TRUE,low,FALSE,830,TRUE,wear_components,brittleness risk
+AISI 4140,alloy_steel,AISI,mixed,medium,TRUE,FALSE,TRUE,TRUE,TRUE,low,FALSE,870,TRUE,gears_shafts,temper required
+AISI 4340,alloy_steel,AISI,mixed,medium,TRUE,FALSE,TRUE,TRUE,TRUE,low,FALSE,870,TRUE,high_strength_components,deep hardening
+AISI D2,tool_steel,AISI,mixed,high,TRUE,FALSE,TRUE,TRUE,TRUE,low,FALSE,1020,TRUE,tooling,air hardening
+AISI H13,tool_steel,AISI,mixed,medium,TRUE,FALSE,TRUE,TRUE,TRUE,low,FALSE,1050,TRUE,tooling,hot work steel
+EN 19,alloy_steel,EN,mixed,medium,TRUE,FALSE,TRUE,TRUE,TRUE,low,FALSE,870,TRUE,gears_shafts,4140 equivalent
+EN 24,alloy_steel,EN,mixed,medium,TRUE,FALSE,TRUE,TRUE,TRUE,low,FALSE,870,TRUE,high_strength_components,4340 equivalent
+AISI 304,stainless_steel,AISI,austenitic,very_low,FALSE,FALSE,FALSE,FALSE,TRUE,high,TRUE,1050,FALSE,corrosion_critical,cold work only
+SS301,stainless_steel,AISI,austenitic,very_low,FALSE,FALSE,FALSE,FALSE,TRUE,high,TRUE,1050,FALSE,high_strength_components,high work hardening
+AISI 316,stainless_steel,AISI,austenitic,very_low,FALSE,FALSE,FALSE,FALSE,TRUE,very_high,TRUE,1050,FALSE,corrosion_critical,no heat hardening
+AISI 410,stainless_steel,AISI,martensitic,low,TRUE,FALSE,TRUE,TRUE,TRUE,medium,FALSE,980,TRUE,wear_components,quench and temper
+AISI 420,stainless_steel,AISI,martensitic,medium,TRUE,FALSE,TRUE,TRUE,TRUE,medium,FALSE,1050,TRUE,wear_components,higher hardness
+AISI 440C,stainless_steel,AISI,martensitic,high,TRUE,FALSE,TRUE,TRUE,TRUE,medium,FALSE,1070,TRUE,wear_components,high carbide
+17-4 PH Stainless Steel,stainless_steel,AISI,martensitic,very_low,TRUE,TRUE,FALSE,TRUE,TRUE,high,FALSE,620,FALSE,high_strength_components,aging hardened
+15-5 PH Stainless Steel,stainless_steel,AISI,martensitic,very_low,TRUE,TRUE,FALSE,TRUE,TRUE,high,FALSE,620,FALSE,high_strength_components,aging hardened
+Duplex Stainless Steel 2205,stainless_steel,UNS,duplex,very_low,FALSE,FALSE,FALSE,TRUE,TRUE,very_high,FALSE,1100,FALSE,corrosion_critical,no martensite
+Ferritic Stainless Steel 430,stainless_steel,AISI,ferritic,very_low,FALSE,FALSE,FALSE,FALSE,TRUE,medium,FALSE,900,FALSE,corrosion_critical,ferritic only
+Maraging Steel 18Ni(300),maraging_steel,AISI,martensitic,very_low,TRUE,TRUE,FALSE,TRUE,TRUE,low,FALSE,820,FALSE,high_strength_components,aging only

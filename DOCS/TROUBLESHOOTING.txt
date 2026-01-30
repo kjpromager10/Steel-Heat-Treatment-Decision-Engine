@@ -1,0 +1,18 @@
+COMMON ISSUES
+
+1. Application does not launch
+- Ensure installation completed successfully
+- Try launching from Start Menu
+- Antivirus software may delay first launch
+
+2. Browser does not open automatically
+- Wait 5–10 seconds
+- Open browser manually and follow on-screen message
+
+3. CSV data errors
+- Ensure values are comma-separated
+- Do not leave empty numeric fields
+- Refer to SAMPLE_DATA for correct format
+
+4. Windows SmartScreen warning
+- Click “More info” → “Run anyway”
