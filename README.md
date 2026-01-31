@@ -37,3 +37,43 @@ This tool is designed for **early-stage engineering decisions**, trade-off analy
 - Open **Steel Heat Treatment Decision Engine** from desktop or Start Menu
 - Click **Launch Application**
 - The UI opens automatically in your browser at:
+http://localhost:8501
+---
+
+## 📂 Output Files
+
+All generated plots are saved automatically to:
+C:\Users<username>\AppData\Local\SteelDecisionEngine\outputs
+
+Each material gets its own folder with bar and radar charts.
+
+---
+
+## ➕ Extending the Engine (Advanced Users)
+
+You can add your own materials and processes using CSV files:
+
+data/user/user_materials.csv
+data/user/user_processes.csv
+
+Rules:
+- Do not modify column headers
+- Leave unused numeric fields empty
+- Restart the application after changes
+
+---
+
+## ⚠️ Disclaimer
+
+This tool:
+- Does NOT perform thermodynamic simulation
+- Does NOT replace standards or certification
+- Is NOT a substitute for expert metallurgical review
+
+It is intended for **decision support**, comparison, and early-stage analysis.
+
+---
+
+## 📄 License
+
+See `LICENSE.txt`
