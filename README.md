@@ -1,54 +1,39 @@
-# Steel Heat Treatment Decision Engine
+# Steel Heat Treatment / Surface Process Decision Engine
 
-A data-driven decision support tool for selecting steel heat treatment and surface engineering processes based on material properties, process constraints, and engineering priorities.
+A Windows-based engineering decision-support tool for selecting suitable **heat treatment and surface processes** based on material properties, constraints, and user priorities.
 
-## Overview
+This tool is designed for **early-stage engineering decisions**, trade-off analysis, and comparative process evaluation — not for final certification or simulation.
 
-This application assists engineers, students, and researchers in identifying suitable heat treatment or surface modification processes for steels by evaluating:
+---
 
-- Material compatibility
-- Process constraints
-- Performance priorities
-- Trade-offs and limitations
+## 🔧 What This Tool Does
 
-The system is designed as an **engineering decision aid**, not a replacement for expert judgment.
+- Evaluates heat treatment and surface processes for steels
+- Applies metallurgical constraints automatically
+- Ranks feasible processes based on user-defined priorities
+- Explains *why* a process scores well or poorly
+- Generates bar and radar charts for property trade-offs
+- Supports material-to-material comparison
 
-## Key Features
+---
 
-- Single material process ranking
-- Material-to-material process comparison
-- Constraint-based filtering
-- Weighted multi-property scoring
-- Explainable recommendations
-- User-extensible material and process databases
-- Standalone Windows installer (no Python required)
+## 🖥️ Installation (Windows)
 
-## Installation
+1. Download the latest installer from **Releases**
+2. Run `SteelDecisionEngine_Setup_vX.X.X.exe`
+3. If Python is not installed:
+   - The installer will prompt you
+   - A Python installer is provided
+   - Install Python and rerun the app installer
+4. Launch the app using the desktop or Start Menu shortcut
 
-1. Download the installer from the `INSTALLER` folder
-2. Run `SteelDecisionEngine_Setup_v1.0.0.exe`
-3. Follow the on-screen instructions
-4. Launch the application from the Start Menu or Desktop shortcut
+✔ No command line required  
+✔ No manual setup after install  
 
-## Basic Usage
+---
 
-- Launch the UI using the provided launcher
-- Select material and define property priorities
-- Review ranked processes and explanations
-- View generated charts and comparisons
+## 🚀 Launching the Application
 
-## User Data Extension
-
-Users may add custom materials or processes by editing CSV files located inside the installed application directory:
-
-
-Refer to `SAMPLE_DATA` for formatting examples.
-
-## Disclaimer
-
-This tool provides recommendations based on predefined models and datasets. Final engineering decisions should always be validated through experiments, standards, and expert review.
-
-## Author
-
-**Kanishk Jain**  
-GitHub: https://github.com/kjpromager10
+- Open **Steel Heat Treatment Decision Engine** from desktop or Start Menu
+- Click **Launch Application**
+- The UI opens automatically in your browser at:

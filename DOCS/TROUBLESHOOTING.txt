@@ -1,18 +1,58 @@
-COMMON ISSUES
+# Troubleshooting
 
-1. Application does not launch
-- Ensure installation completed successfully
-- Try launching from Start Menu
-- Antivirus software may delay first launch
+## Application Does Not Launch
 
-2. Browser does not open automatically
-- Wait 5–10 seconds
-- Open browser manually and follow on-screen message
+✔ Ensure Python is installed  
+✔ Ensure Python was installed using the provided installer  
+✔ Re-run the app installer after installing Python  
 
-3. CSV data errors
-- Ensure values are comma-separated
-- Do not leave empty numeric fields
-- Refer to SAMPLE_DATA for correct format
+---
 
-4. Windows SmartScreen warning
-- Click “More info” → “Run anyway”
+## "Python Not Detected" Message
+
+- Install Python using the bundled installer
+- Close the installer completely
+- Run the installer again
+
+This is required due to Windows PATH refresh behavior.
+
+---
+
+## UI Shows "Not Responding"
+
+- This can occur briefly during first launch
+- Dependencies are being loaded
+- Wait a few seconds
+
+The application continues running normally.
+
+---
+
+## Permission Errors
+
+- Do not run the app from Program Files manually
+- Outputs are stored in AppData by design
+- No administrator privileges are required
+
+---
+
+## Output Folder Not Found
+
+- Run at least one analysis
+- Output folders are created on demand
+
+---
+
+## Browser Does Not Open Automatically
+
+- Manually open:
+http://localhost:8501
+- Ensure port 8501 is not blocked
+
+---
+
+## Antivirus / SmartScreen Warnings
+
+- This is common for unsigned installers
+- Add an exception if required
+- No system-level changes are made by the app

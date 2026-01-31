@@ -1,161 +1,68 @@
-STEEL HEAT TREATMENT / SURFACE PROCESS DECISION ENGINE
-USER GUIDE
-----------------------------------------------------
+# User Guide — Steel Decision Engine
 
-1. INTRODUCTION
+## 1. Single Material Evaluation
 
-The Steel Heat Treatment / Surface Process Decision Engine is a Windows-based
-application that helps users evaluate and compare heat treatment and surface
-engineering processes for steel materials.
-
-This guide explains how to install, launch, and use the application, as well as
-how to extend it with custom material or process data.
-
-
-2. SYSTEM REQUIREMENTS
-
-- Windows 10 or later (64-bit)
-- Modern web browser (Chrome, Edge, Firefox recommended)
-- No Python installation required (bundled with installer)
-
-
-3. INSTALLATION
-
-1. Download the installer:
-   SteelDecisionEngine_Setup_v1.0.0.exe
-
-2. Double-click the installer file.
-
-3. Follow the on-screen instructions to complete installation.
-
-4. After installation, shortcuts will be available:
-   - Start Menu
-   - Desktop (if selected during install)
-
-
-4. LAUNCHING THE APPLICATION
-
-1. Launch the application using:
-   - Desktop shortcut, OR
-   - Start Menu → Steel Heat Treatment Decision Engine
-
-2. A launcher window will appear with the following options:
-   - Launch UI
-   - Stop UI
-   - Exit
-
-3. Click "Launch UI".
-
-4. The application UI will open automatically in your default web browser.
-   If the browser does not open immediately, wait a few seconds.
-
-
-5. SINGLE MATERIAL EVALUATION MODE
-
-This mode evaluates suitable processes for a single steel material.
-
-Steps:
-1. Select a material from the dropdown list.
-2. Set priority sliders for desired properties:
-   - Wear resistance
-   - Fatigue life
-   - Corrosion resistance
-   - Strength
-   - Toughness
-   - Dimensional stability
-3. Set process constraints:
-   - Maximum process temperature
-   - Distortion tolerance
-4. Click "Run Decision Engine".
+1. Select a material
+2. Set property priorities (1–5)
+3. Define process constraints
+4. Click **Run Decision Engine**
 
 Results:
 - Ranked list of feasible processes
-- Explanation for each ranking
-- Bar charts and radar charts for each process
-- List of rejected processes with reasons
+- Explanation of scoring
+- Visual bar and radar plots
+- Explicit rejection reasons
 
+---
 
-6. MATERIAL COMPARISON MODE
+## 2. Material Comparison Mode
 
-This mode compares process outcomes between two materials.
+Compare two materials using:
+- Best process vs best process
+- Manual process selection
 
-Steps:
-1. Select Material A and Material B.
-2. Choose whether to use the same priorities for both materials.
-3. Set priorities and constraints.
-4. Select comparison type:
-   - Best vs Best
-   - Manual Process Selection
-5. Click "Run Comparison".
+Useful for:
+- Material substitution studies
+- Design trade-off evaluation
+- Process sensitivity analysis
 
-Results:
-- Visual comparison charts showing performance differences between materials.
+---
 
+## 3. Understanding the Results
 
-7. OUTPUT FILES AND SAVED RESULTS
+### Scores
+- Relative, not absolute
+- Only comparable within a single run
 
-The application automatically saves generated plots and comparison images
-inside the installation directory.
+### Explanations
+- Highlight dominant property contributions
+- Explicitly list trade-offs and compromises
 
-Typical location:
-C:\Program Files\SteelDecisionEngine\outputs\
+### Rejected Processes
+- Removed due to hard constraints
+- Not negotiable by weighting
 
-These files can be reused for reports, presentations, or documentation.
+---
 
+## 4. Output Files
 
-8. ADDING CUSTOM MATERIALS OR PROCESSES (ADVANCED USERS)
+- Generated automatically
+- Saved as PNG
+- Suitable for reports and presentations
 
-The engine supports user-defined data through CSV files.
+---
 
-Location:
-C:\Program Files\SteelDecisionEngine\data\user\
+## 5. Custom Materials & Processes
 
-Files:
-- user_materials.csv
-- user_processes.csv
+Edit:
+- `user_materials.csv`
+- `user_processes.csv`
 
-Instructions:
-- Follow the column format strictly.
-- Do not leave numeric fields empty.
-- Use comma-separated values only.
-- Refer to SAMPLE_DATA files provided in the repository for examples.
+Restart app after editing.
 
-After editing CSV files:
-1. Save the file.
-2. Restart the application.
-3. New entries will appear in the UI automatically.
+---
 
+## 6. Closing the App
 
-9. STOPPING THE APPLICATION
-
-To stop the application:
-1. Return to the launcher window.
-2. Click "Stop UI".
-
-This safely terminates the running session.
-
-
-10. COMMON USAGE TIPS
-
-- Higher priority values increase influence in scoring.
-- Constraint filtering occurs before scoring.
-- Rejected processes are shown with explicit reasons.
-- Visual charts help interpret trade-offs more effectively than scores alone.
-
-
-11. LIMITATIONS AND DISCLAIMER
-
-- The application provides decision support, not final prescriptions.
-- Results depend on data quality and model assumptions.
-- Always validate recommendations through engineering standards,
-  simulations, or experiments before implementation.
-
-
-12. SUPPORT
-
-For issues, updates, or documentation:
-GitHub Repository:
-https://github.com/kjpromager10/HeatTransferAlgo
-
-Author:
-Kanishk Jain
+- Use **Stop Application** in launcher
+- Closing browser tab alone does not stop backend
